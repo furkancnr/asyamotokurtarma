@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AsyamOtoKurtarma - Çok Yakında Sizlerle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        #timer {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
 
+    <h1>AsyamOtoKurtarma - Çok Yakında Sizlerle</h1>
+    
+    <div id="timer">00:00:00</div>
+    
+    <footer>İletişim: +90 536 816 7976</footer>
+
+    <script>
+        // Geri sayım için hedef zaman (1 Ocak 2025)
+        const targetDate = new Date("Jan 1, 2025 00:00:00").getTime();
+
+        // Her saniyede bir geri sayımı güncelle
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            // Zaman birimleri
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Geri sayım formatını ayarla
+            document.getElementById("timer").innerHTML = days + " Gün " + hours + " Saat " + minutes + " Dakika " + seconds + " Saniye ";
+
+            // Geri sayım bittiğinde
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById("timer").innerHTML = "Başladı!";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
