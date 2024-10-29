@@ -46,13 +46,14 @@
     display: none;
 }
 
-/* Text centering for slide titles and descriptions */
+/* Center text with adjusted positioning */
 .slider-content {
     position: absolute;
-    top: 50%;
+    top: 60%; /* Adjusted from 50% to lower text */
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    text-align: center;
 }
 
 .slider-title {
@@ -63,28 +64,27 @@
 
 .slider-description {
     font-size: 18px;
+    margin-bottom: 20px; /* Space between description and buttons */
 }
 
-/* Navigation arrows and pagination dots */
-.tparrows {
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0.5);
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    display: block;
-    color: #fff;
-    text-align: center;
-    line-height: 40px;
+/* Button section styling */
+.slider-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-.tp-bullet {
-    width: 15px;
-    height: 15px;
-    background: rgba(255, 255, 255, 0.3);
+.slider-button {
+    padding: 10px 20px;
+    background-color: #137cb0; /* Button color */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.tp-bullet.selected,
-.tp-bullet:hover {
-    background: #fff;
+
+.slider-button:hover {
+    background-color: #0d5a85; /* Darker shade on hover */
 }
