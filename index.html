@@ -7,15 +7,19 @@
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Tema renklerini ayarlıyoruz */
+        /* Header ve gövde için beyaz arka plan */
+        body {
+            background-color: #ffffff; /* beyaz */
+        }
         .navbar {
-            background-color: #1a1a2e; /* koyu lacivert */
+            background-color: #ffffff; /* header beyaz */
+            border-bottom: 2px solid #f9a825; /* Alt çizgiyle ayırma */
         }
         .navbar-brand, .nav-link {
-            color: #f9a825 !important; /* turuncu */
+            color: #1a1a2e !important; /* koyu lacivert */
         }
         .nav-link:hover {
-            color: #ffffff !important; /* hover için beyaz */
+            color: #f9a825 !important; /* hover turuncu */
         }
     </style>
 </head>
@@ -42,6 +46,29 @@
         </div>
     </div>
 </nav>
+
+<!-- Gövde Bölümü (Kaydırmalı Galeri) -->
+<div id="photoCarousel" class="carousel slide mt-4" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="images/photo1.jpg" class="d-block w-100" alt="Fotoğraf 1">
+        </div>
+        <div class="carousel-item">
+            <img src="images/photo2.jpg" class="d-block w-100" alt="Fotoğraf 2">
+        </div>
+        <div class="carousel-item">
+            <img src="images/photo3.jpg" class="d-block w-100" alt="Fotoğraf 3">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#photoCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Önceki</span>
+    </a>
+    <a class="carousel-control-next" href="#photoCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Sonraki</span>
+    </a>
+</div>
 
 <!-- Bootstrap JS (İsteğe bağlı olarak ekleyebiliriz) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
