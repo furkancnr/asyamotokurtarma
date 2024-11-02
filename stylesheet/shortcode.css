@@ -6327,7 +6327,7 @@
 -------------------------------------------------------------- */
 	.flat-professional-services {
 		position: relative;
-		background: url("../images/home5/bg-professional.png") center center no-repeat;
+        background-color: #333333;
 		background-size:  cover;
 		padding-top: 238px;
 		padding-bottom: 490px; 
