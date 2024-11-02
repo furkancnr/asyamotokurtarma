@@ -2789,9 +2789,10 @@
 	}
 
 	/* Footer */
-	.flat-copy-right {
-		position: relative;
-	}
+.flat-copy-right {
+    position: relative;
+    text-align: center;
+}
 
 	#footer .bottom .flat-copy-right:after {
 		content: "";
