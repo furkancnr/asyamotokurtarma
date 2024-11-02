@@ -6264,29 +6264,35 @@
 		margin-bottom: 30px;
 	}
 
-/* Flat Accessories
--------------------------------------------------------------- */
-	.flat-accessories {
-		background: url("../images/home5/bg-accessories.png") center center no-repeat;
-		position: relative;
-		background-size: cover;
-	}
+/* Flat Accessories */
+.flat-accessories {
+    background-color: #333333; /* Koyu gri arka plan */
+    position: relative;
+    background-size: cover;
+}
 
-	.flat-accessories .accessories-wrap {
-		position: relative;
-	}
+.flat-accessories .accessories-wrap {
+    position: relative;
+}
 
-	.flat-accessories .overlay {
-		top: 0;
-		left: 0;
-		opacity: 0.7;
-		background: #000000;
-		
-	}
+.flat-accessories .overlay {
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0.5); /* Hover rengini direkt uyguladık */
+}
 
-	.flat-accessories .flat-filter {
-		padding-top: 20px;
-	}
+/* .flat-accessories .overlay:hover */
+.flat-accessories .overlay {
+    /* Hover efektini sürekli açık hale getirdik */
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1; /* Hover opaklık değeri */
+}
+
+.flat-accessories .flat-filter {
+    padding-top: 20px;
+}
+
 	
 /* Flat Popular Product
 -------------------------------------------------------------- */
